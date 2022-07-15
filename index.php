@@ -57,11 +57,26 @@ mysqli_close($connect)
     </head>
     <body>
         <div class="manageProduct w-75 mt-3">
-            <div class='mb-3'>
-                <a href= "create.php"><button class='btn btn-info'type="button" >Add To Library</button></a>
-            </div>
+            <div class="container p-5">
+                <div class = 'row'>
+                    <div class='mb-3 col-auto mr-auto'>
+                        <a href= "create.php"><button class='btn btn-info'type="button" >Add to library</button></a>
+                    </div>
+                    <div class="dropdown col-auto">
+                        <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        Sort
+                        </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="sort.php">All</a></li>
+                                <li><a class="dropdown-item" href="sort.php?type=book">Book</a></li>
+                                <li><a class="dropdown-item" href="sort.php?type=cd">CD</a></li>
+                                <li><a class="dropdown-item" href="sort.php?type=dvd">DVD</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             <p class='h2'>library</p>
-            <table class='table table-hover'>
+            <table class='table table-hover shadow p-3 mb-5'>
                 <thead class='table-dark'>
                     <tr>
                         <th scope="col">Picture</th>
