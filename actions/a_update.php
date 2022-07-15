@@ -21,7 +21,7 @@ if ($_POST) {
     $picture = file_upload($_FILES['pic']);
     if($picture->error===0){
         ($_POST["pic"]=="pic_avatar.jpg")?: unlink("../pic/$_POST[pic]");
-        $sql = "UPDATE library SET `title` = '$title', `pic` = '$picture->fileName', `isbncode` = '$isbncode', `dis` = '$dis', , `type` = '$type', `author_first_name`= '$author_first_name' , `author_last_name` = '$author_last_name',`publisher_name` = '$publisher_name', `publisher_address` = '$publisher_address',`publish_date` = '$publish_date', `status`= '$status' WHERE id = {$id}";
+        $sql = "UPDATE library SET `title` = '$title', `pic` = '$picture->fileName', `isbncode` = '$isbncode', `dis` = '$dis', `type` = '$type', `author_first_name`= '$author_first_name' , `author_last_name` = '$author_last_name',`publisher_name` = '$publisher_name', `publisher_address` = '$publisher_address',`publish_date` = '$publish_date', `status`= '$status' WHERE id = {$id}";
     }else{
         $sql = "UPDATE library SET `title` = '$title', `isbncode` = '$isbncode', `dis` = '$dis', `type` = '$type', `author_first_name`= '$author_first_name' , `author_last_name` = '$author_last_name',`publisher_name` = '$publisher_name', `publisher_address` = '$publisher_address',`publish_date` = '$publish_date', `status`= '$status'WHERE id  = {$id}";
     }
